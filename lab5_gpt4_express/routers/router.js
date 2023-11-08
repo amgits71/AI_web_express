@@ -41,4 +41,36 @@ const {
 
 router.route("/what-is-gpt").get(getWhatIsGptData).post(postWhatIsGptData);
 
+// Expectations роутер
+const {
+  getExpectationsData,
+  postExpectationsData,
+} = require("../controllers/expectationsDataController");
+
+router.route("/expectations").get(getExpectationsData).post(postExpectationsData);
+
+// Cta роутер
+const {
+  getCtaData,
+  postCtaData,
+} = require("../controllers/ctaDataController");
+
+router.route("/cta").get(getCtaData).post(postCtaData);
+
+// Blog роутер
+const {
+  getBlogData,
+  postBlogData,
+} = require("../controllers/blogDataController");
+
+router.route("/blog").get(getBlogData).post(postBlogData);
+
+// Footer роутер
+const {
+  getFooterData,
+  postFooterData,
+} = require("../controllers/footerDataController");
+
+router.route("/footer").get(getFooterData).post(postFooterData);
+
 module.exports = router;
