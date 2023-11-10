@@ -25,8 +25,12 @@ const isFooterDataValid = (data) => {
 
   isArrayHasLength(footerMenuData);
   footerMenuData.forEach((item) => {
-    isObjectHasProps(item, ["header", "href", "link1", "link2", "link3", "link4"]);
+    isObjectHasProps(item, ["header", "href", "links"]);
+    const { links } = item;
+    isArrayHasLength(links);
+    isObjectHasProps(links, ["link1", "link2", "link3", "link4"]); 
   });
+
 };
 
 module.exports = isFooterDataValid;
