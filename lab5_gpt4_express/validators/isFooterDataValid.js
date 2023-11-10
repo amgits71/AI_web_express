@@ -27,7 +27,6 @@ const isFooterDataValid = (data) => {
   footerMenuData.forEach((item) => {
     isObjectHasProps(item, ["header", "href", "links"]);
     const { links } = item;
-    isArrayHasLength(links);
     isObjectHasProps(links, ["link1", "link2", "link3", "link4"]); 
   });
 
